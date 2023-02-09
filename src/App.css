@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  font-family: 'Arial';
+  font-size: 1.2rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root {
+  height: 100vh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+.header-items a {
+  text-decoration: none;
+}
+
+.dark button {
+  background-color: transparent;
+  border: 1px solid white;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  padding: 10px;
+  flex: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.light {
+  background-color: rgb(0, 0, 0, 0.13);
+  color: #131313;
+}
+.dark {
+  background-color: #131313;
+  color: #fff;
+}
+
+.header {
+  padding: 10px;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #131313;
+}
+.footer {
+  padding: 10px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #131313;
+}
+
+.dark .footer {
+  border-top: 1px solid white;
+}
+
+.dark .header {
+  border-bottom: 1px solid white;
+}
+
+.dark a {
+  color: white;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  color: darkorange;
+}
+.blog {
+  display: flex;
+  justify-content: space-between;
+}
+.content {
+  flex: 1 75%;
+  padding: 10px;
+}
+.aside {
+  flex: 1 25%;
+  padding: 10px;
+}
+
+/* Login page style */
+.form {
+  max-width: 600px;
+}
+
+.form-item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.form-item > .label {
+  flex: 1 1 100px;
+}
+
+.form-item > input,
+.form-item > textarea,
+.form-item > span,
+.form-item > button {
+  flex: 3 1 300px;
+}
+.error {
+  color: #c04040;
+}
+
+.active {
+  font-weight: bold;
+}
+
+.success {
+  color: green;
 }
