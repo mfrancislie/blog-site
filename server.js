@@ -7,6 +7,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
+mongoose.set('strictQuery', false);
 mongoose
   .connect(process.env.MONGODB_URI, {
     useNewUrlparser: true,
