@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1.3rem;
 }
 
 code {
@@ -15,6 +16,7 @@ code {
 a {
   color: #305090;
   text-decoration: none;
+  margin: 0.5rem;
 }
 a:hover {
   color: #f08040;
@@ -51,4 +53,28 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-top: 1px #404040 solid;
+}
+
+/* toggle them button */
+
+button {
+  cursor: pointer;
+  padding: 10px;
+
+  border: 1px solid #c0c0c0;
+}
+
+.dark {
+  background-color: #202020;
+  color: #e0e0e0;
+}
+.dark button {
+  background-color: #202020;
+  color: #e0e0e0;
+}
+.dark a {
+  color: #40c0f0;
+}
+a:hover {
+  color: #f08040;
 }
