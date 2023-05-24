@@ -69,13 +69,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
 ## Lessons
+
 1. Create Layout
    1. create react app
    2. add header and footer
    3. show brand link and menus on header
 2. Create Context
-   1. add context 
+   1. add context
    2. add theme to context
    3. add button to navbar to change the theme
+3. Define Routes
+   1. Home Page
+   2. Post Page
