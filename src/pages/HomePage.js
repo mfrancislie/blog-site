@@ -43,10 +43,8 @@ const HomePage = () => {
     loading: false,
     error: '',
     posts: [],
-    users: [],
+    users: [], 
     user: {}, // to filter users post
-    loadingUsers: false,
-    errorUsers: '',
   });
 
   const { loading, error, posts, loadingUsers, errorUsers, users, user } =
