@@ -34,6 +34,8 @@ const HomePage = () => {
     error: '',
     posts: [],
     users: [],
+    loadingUsers: false,
+    errorUsers: '',
   });
 
   const { loading, error, posts, loadingUsers, errorUsers, users } = state;
