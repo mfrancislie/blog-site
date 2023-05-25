@@ -90,3 +90,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
    1. define reducers
    2. create load users function
    3. show loading, error and users
+6. Create Post Details Page
+   1. link posts in home page
+   2. fetch posts from backend
+   3. render post title and body
+   4. render post title and body
