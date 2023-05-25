@@ -82,3 +82,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 3. Define Routes
    1. Home Page
    2. Post Page
+4. List Posts
+   1. define reducers
+   2. create load posts function
+   3. show loading, error and posts
+5. List Users
+   1. define reducers
+   2. create load users function
+   3. show loading, error and users
