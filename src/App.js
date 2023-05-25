@@ -15,6 +15,8 @@ const App = () => {
         <div className="main">
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route path="/search/:query?" element={<HomePage />} />
+            <Route path="/user/:userId" element={<HomePage />} />
             <Route path="/post/:postId" element={<PostPage />} />
           </Routes>
         </div>

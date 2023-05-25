@@ -83,7 +83,7 @@ li {
 }
 
 /* toggle them button */
-
+input,
 button {
   cursor: pointer;
   padding: 10px;
