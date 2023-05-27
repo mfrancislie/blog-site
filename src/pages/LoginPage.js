@@ -43,7 +43,7 @@ const LoginPage = () => {
     dispatch({ type: 'LOGIN_REQUEST' });
     try {
       const { data } = await axios(
-        `https://jsonplaceholder.typicode.com/users?email=${email}&password=${password}`
+        `/api/users?email=${email}&password=${password}`
       );
       if (data.length > 0) {
         dispatch({ type: 'LOGIN_SUCCESS', payload: data[0] });
