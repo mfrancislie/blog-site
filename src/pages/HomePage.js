@@ -56,9 +56,7 @@ const HomePage = () => {
     dispatch({ type: 'POSTS_REQUEST' });
     try {
       const { data } = await Axios.get(
-        userId
-          ? 'https://jsonplaceholder.typicode.com/posts?userId=' + userId
-          : 'https://jsonplaceholder.typicode.com/posts'
+        userId ? '/api/posts?userId=' + userId : '/api/posts'
       );
       // to filterpost search
       const filteredPost = query

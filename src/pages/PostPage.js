@@ -30,12 +30,8 @@ const PostPage = () => {
     const fetchPost = async () => {
       dispatch({ type: 'POST_REQUEST' });
       try {
-        const { data } = await Axios.get(
-          `https://jsonplaceholder.typicode.com/posts/${postId}`
-        );
-        const { data: userData } = await Axios.get(
-          `https://jsonplaceholder.typicode.com/users/${data.userId}`
-        );
+        const { data } = await Axios.get(`/api/posts/${postId}`);
+        const { data: userData } = await Axios.get(`/api/users/${data.userId}`);
         dispatch({
           type: 'POST_SUCCESS',
           payload: { ...data, user: userData },
