@@ -1,9 +1,14 @@
 import axios from 'axios';
-import React, { useEffect, useReducer, useState } from 'react';
+import React, { useContext, useEffect, useReducer, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { ThemeContext } from '../ThemeContext';
 
 const LoginPage = () => {
+  const { user, setUser } = useContext(ThemeContext);
   const navigate = useNavigate();
+  if (user) {
+    navigate('/profile');
+  }
 
   const reducer = (state, action) => {
     switch (action.type) {
@@ -52,9 +57,10 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (loggInUser) {
+      setUser(loggInUser);
       return navigate('/profile');
     }
-  }, [loggInUser, navigate]);
+  }, [loggInUser, navigate, setUser]);
 
   return (
     <div>
