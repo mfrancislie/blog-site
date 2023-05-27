@@ -126,3 +126,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     1. add backendAPI to the context
     2. add switch button to navbar
     3. use it in the all screens
+15. Create Post
+    1. build input form to create post
+    2. handle input events
+    3. call api to save the post
+16. Update User Profile
+    1. build input form to update
+    2. handle input events
+    3. call api to update profile
