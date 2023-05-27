@@ -3,7 +3,7 @@ import { ThemeContext } from '../ThemeContext';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme, user } = useContext(ThemeContext);
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
@@ -30,9 +30,20 @@ const Navbar = () => {
         </form>
       </div>
       <div className="header-item">
-        <NavLink to="/login" activeClassName="active">
-          Login
-        </NavLink>
+        {user ? (
+          <>
+            <NavLink to="/profile" activeClassName="active">
+              {user.name}
+            </NavLink>{' '}
+            <NavLink to="/create" activeClassName="active">
+              Create Post
+            </NavLink>
+          </>
+        ) : (
+          <NavLink to="/login" activeClassName="active">
+            Login
+          </NavLink>
+        )}
         <button onClick={toggleTheme}>
           {theme === 'light' ? 'light' : 'dark'}
         </button>

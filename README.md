@@ -95,3 +95,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
    2. fetch posts from backend
    3. render post title and body
    4. render post title and body
+7. Filter Posts By Keyword and Authors
+   1. Add search query to routes
+   2. implement filter by query in home screen
+   3. Add userId to routes
+   4. implement filter by user in home screen
+8. Login User
+   1. Create Login Page
+   2. design login form
+   3. handle login action
+   4. set user in the context
+9. Authenticate User
+   1. Add user to context
+   2. create private route

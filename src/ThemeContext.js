@@ -4,11 +4,12 @@ const ThemeContext = createContext();
 
 function ThemeContextProvider(props) {
   const [theme, setTheme] = useState('light');
+  const [user, setUser] = useState(null);
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, user, setUser }}>
       {props.children}
     </ThemeContext.Provider>
   );
