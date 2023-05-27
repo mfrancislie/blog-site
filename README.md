@@ -122,3 +122,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     2. create post list and details
     3. seed sample data
     4. Go to HomePage, PostPage & LoginPage to changes fake api to real api
+14. Switch Between Mock and Real Backend API
+    1. add backendAPI to the context
+    2. add switch button to navbar
+    3. use it in the all screens

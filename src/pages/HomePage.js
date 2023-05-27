@@ -1,8 +1,10 @@
 import Axios from 'axios';
-import React, { useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { ThemeContext } from '../ThemeContext.js';
 
 const HomePage = () => {
+  const { backendAPI } = useContext(ThemeContext);
   const { query, userId } = useParams();
 
   const reducer = (state, action) => {
@@ -56,7 +58,7 @@ const HomePage = () => {
     dispatch({ type: 'POSTS_REQUEST' });
     try {
       const { data } = await Axios.get(
-        userId ? '/api/posts?userId=' + userId : '/api/posts'
+        userId ? `${backendAPI}/posts?userId=${userId}` : `${backendAPI}/posts`
       );
       // to filterpost search
       const filteredPost = query
@@ -75,7 +77,7 @@ const HomePage = () => {
     dispatch({ type: 'USERS_REQUEST' });
     try {
       const { data } = await Axios.get(
-        userId ? '/api/users/' + userId : '/api/users'
+        userId ? `${backendAPI}/users/${userId}` : `${backendAPI}/users`
       );
       dispatch({
         type: userId ? 'USER_SUCCESS' : 'USERS_SUCCESS',
@@ -90,7 +92,7 @@ const HomePage = () => {
     loadPosts();
     loadUsers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query, userId]);
+  }, [query, userId, backendAPI]);
 
   return (
     <div className="blog">

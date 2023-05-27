@@ -1,8 +1,11 @@
 import Axios from 'axios';
-import React, { useEffect, useReducer } from 'react';
+import React, { useContext, useEffect, useReducer } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { ThemeContext } from '../ThemeContext.js';
 
 const PostPage = () => {
+  const { backendAPI } = useContext(ThemeContext);
+
   const { postId } = useParams();
 
   const reducer = (state, action) => {
@@ -30,8 +33,10 @@ const PostPage = () => {
     const fetchPost = async () => {
       dispatch({ type: 'POST_REQUEST' });
       try {
-        const { data } = await Axios.get(`/api/posts/${postId}`);
-        const { data: userData } = await Axios.get(`/api/users/${data.userId}`);
+        const { data } = await Axios.get(`${backendAPI}/posts/${postId}`);
+        const { data: userData } = await Axios.get(
+          `${backendAPI}/users/${data.userId}`
+        );
         dispatch({
           type: 'POST_SUCCESS',
           payload: { ...data, user: userData },
@@ -41,7 +46,7 @@ const PostPage = () => {
       }
     };
     fetchPost();
-  }, [postId]);
+  }, [backendAPI, postId]);
 
   return (
     <div>

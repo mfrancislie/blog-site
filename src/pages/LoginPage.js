@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ThemeContext } from '../ThemeContext.js';
 
 const LoginPage = () => {
-  const { user, setUser } = useContext(ThemeContext);
+  const { user, setUser, backendAPI } = useContext(ThemeContext);
   const navigate = useNavigate();
   if (user) {
     navigate('/profile');
@@ -43,7 +43,7 @@ const LoginPage = () => {
     dispatch({ type: 'LOGIN_REQUEST' });
     try {
       const { data } = await axios(
-        `/api/users?email=${email}&password=${password}`
+        `${backendAPI}/users?email=${email}&password=${password}`
       );
       if (data.length > 0) {
         dispatch({ type: 'LOGIN_SUCCESS', payload: data[0] });
