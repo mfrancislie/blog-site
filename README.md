@@ -108,3 +108,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 9. Authenticate User
    1. Add user to context
    2. create private route
+10. Implement Backend API
+    1. Install express
+    2. create express app
+11. Connect to MongoDB Database 2. create mongodb database on atlas cloud server 3. create .env file and past connection uri there
+    1. Install mongoose and dotenv
+    2. connect to the database
+12. Create User APIs
+    1. create user model
+    2. create user list and details
+13. Create Post APIs
+    1. create post model
+    2. create post list and details
+    3. seed sample data

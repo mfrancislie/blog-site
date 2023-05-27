@@ -77,9 +77,7 @@ const HomePage = () => {
     dispatch({ type: 'USERS_REQUEST' });
     try {
       const { data } = await Axios.get(
-        userId
-          ? 'https://jsonplaceholder.typicode.com/users/' + userId
-          : 'https://jsonplaceholder.typicode.com/users'
+        userId ? '/api/users/' + userId : '/api/users'
       );
       dispatch({
         type: userId ? 'USER_SUCCESS' : 'USERS_SUCCESS',

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../ThemeContext.js';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
