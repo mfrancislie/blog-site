@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../ThemeContext';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -30,7 +30,9 @@ const Navbar = () => {
         </form>
       </div>
       <div className="header-item">
-        <a href="/login">Login</a>
+        <NavLink to="/login" activeClassName="active">
+          Login
+        </NavLink>
         <button onClick={toggleTheme}>
           {theme === 'light' ? 'light' : 'dark'}
         </button>
