@@ -3,7 +3,8 @@ import { ThemeContext } from '../ThemeContext.js';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
-  const { theme, toggleTheme, user } = useContext(ThemeContext);
+  const { theme, toggleTheme, user, toggleBackendAPI, backendAPI } =
+    useContext(ThemeContext);
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
@@ -46,6 +47,9 @@ const Navbar = () => {
         )}
         <button onClick={toggleTheme}>
           {theme === 'light' ? 'light' : 'dark'}
+        </button>
+        <button onClick={toggleBackendAPI}>
+          {backendAPI === '/api' ? 'API:Real' : 'API:Mock'}
         </button>
       </div>
     </div>
