@@ -134,3 +134,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     1. build input form to update
     2. handle input events
     3. call api to update profile
+17. Register Screen
+    1. Copy login screen
+    2. change to register

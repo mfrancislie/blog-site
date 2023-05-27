@@ -8,6 +8,7 @@ import PostPage from './pages/PostPage.js';
 import LoginPage from './pages/LoginPage.js';
 import ProfilePage from './pages/ProfilePage.js';
 import CreatePostPage from './pages/CreatePostPage.js';
+import RegisterPage from './pages/RegisterPage.js';
 
 const App = () => {
   const { theme } = useContext(ThemeContext);
@@ -19,6 +20,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/create" element={<CreatePostPage />} />
             <Route path="/search/:query?" element={<HomePage />} />
