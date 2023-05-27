@@ -62,7 +62,7 @@ app.post('/api/users', async (req, res) => {
 app.put('/api/users/:id', async (req, res) => {
   const { id } = req.params;
   const { email, name, phone, password, website } = req.body;
-  const user = await User.findOne(id);
+  const user = await User.findOne({ id });
   if (user) {
     user.email = email;
     user.name = name;

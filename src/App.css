@@ -127,9 +127,14 @@ a:hover {
 .form-item > button {
   flex: 3 1 300px;
 }
+textarea {
+  min-height: 200px;
+}
+
+/* alert */
 .error {
   color: #c04040;
 }
-textarea {
-  min-height: 200px;
+.success {
+  color: #40c040;
 }
